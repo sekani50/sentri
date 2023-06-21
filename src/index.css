@@ -53,7 +53,7 @@ body {
 .container {
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -113,11 +113,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 15px;
-  width: 15px;
-  border: 1px solid black;
-  border-radius: 2px;
-  background-color: #eee;
+
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid #01C38D;
+  background-color: #fff;
 }
 
 /* On mouse-over, add a grey background color */
@@ -127,7 +128,7 @@ body {
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #ccc;
+ 
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -144,15 +145,14 @@ body {
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-  left: 4px;
-  top: 1px;
-  width: 5px;
+  position:absolute;
+  margin:auto auto;
+  inset: 0;
+  width: 10px;
   height: 10px;
-  border: 1px solid black;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  border-radius: 50%;
+  background: #01C38D;
+ 
 }
 .hide-scroll::-moz-scrollbar {
   display: none;
@@ -190,16 +190,10 @@ body {
   display: flex;
 }
 
-#show {
-  display: block;
-}
-#hide {
-  display: none;
-}
 
 .let {
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -254,13 +248,87 @@ body {
   }
 }
 
-#show-border {
-  @apply text-[#7BBE4A] border-[#7BBE4A] bg-[#F7F7F7] border-b-2;
+.animation {
+  animation: typing 2s steps(6);
 }
 
-#hide-food {
-  display: none;
+@keyframes typing {
+  from {width:0};
 }
+@-webkit-keyframes typing {
+  from {width:0};
+}
+
+.enter {
+  animation: enter .5s linear;
+}
+
+@keyframes enter {
+  from {width:0;
+        height:0;};
+  to {width:100%;
+  height:100%;};
+}
+@-webkit-keyframes enter {
+  from {width:0;
+    height:0;};
+to {width:100%;
+height:100%;};
+}
+
+.bouncing {
+  animation: bounce .4s 8 alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(20);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glide {
+  to {
+    top: 40px;
+    left:50px;
+  }
+  
+}
+
+.lets {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.swipeDown {
+  animation-name: swipeUp;
+  -webkit-animation-name: swipeUp;
+}
+
+@keyframes swipeUp {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes swipeUp {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+  }
+}
+
 
 #show {
   display: block;
@@ -298,10 +366,9 @@ label.label input[type="file"] {
   @apply bg-gray-100 border border-gray-200
 }
 
-.react-tel-input .flag-dropdown {
-  border:0px;
-}
-
+._1Lxpd {
+  width:100%;
+} 
 
 .filters {
   filter:blur(20px);

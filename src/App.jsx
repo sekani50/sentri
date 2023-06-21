@@ -4,6 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Scrolltotop from "./components/UI/ScrollToTop";
 import { RequireAuth } from "./Utils/RequireAuth";
 import {
+  Landing,
   Registration
 } from "./Pages";
 
@@ -37,7 +38,8 @@ const App = () => {
         <Scrolltotop />
         <Routes>
           {/*    AUTH PAGE */}
-          <Route exact path="/" element={<Registration />} />
+          <Route exact path="/signup" element={<Registration />} />
+          <Route exact path="/" element={<Landing />} />
           {/*    LANDING PAGE */}
           {/**Protected routes */}
     

@@ -15,9 +15,13 @@ const Registration = () => {
   console.log(active)
   return (
     <div className="w-full h-full fixed inset-0 text-zinc-800 bg-[#132D46]">
-      <div className="w-full sm:w-[450px] absolute m-auto h-fit inset-0  space-y-5">
+       <div className="top-10 left-[50px] max-[860px]:hidden h-[60px] enter lg:left-[100px] absolute lg:h-[70px] w-fit">
+            <img className="w-full h-full" src={logo} alt="" />
+        </div>
 
-        <div className="w-full flex space-x-4">
+      <div className="w-full sm:w-[420px] transform lets swipeDown ease-in-out absolute m-auto h-fit inset-0  space-y-5">
+       
+        <div className="w-full items-center justify-center flex space-x-4">
           <div
           onClick={() => {
             setActive(0)

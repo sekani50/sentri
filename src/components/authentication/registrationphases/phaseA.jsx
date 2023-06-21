@@ -36,11 +36,11 @@ const PhaseA = ({active}) => {
         dispatch(LoginAction(payload, navigate, setLoading));
       };
     return (
-        <div className={active === 0 ?"w-full let swipeInLeft relative h-[500px] px-6 sm:px-8 py-6 flex  flex-col justify-center items-center  sm:rounded-lg bg-white border shadow-xl" : "hidden"}>
+        <div className={active === 0 ?"w-full  relative h-[500px] px-6 sm:px-8 py-6 flex  flex-col justify-center items-center  sm:rounded-lg bg-white border shadow-xl" : "hidden"}>
         
        <div className="absolute top-8 px-6 sm:px-8 inset-x-0 mx-auto w-full">
        <div className="w-full flex items-start mb-6 justify-start">
-        <div className="text-2xl font-medium text-[#132D46] ">Get started with <span className="uppercase text-[#01C38D]">sentri</span></div>
+        <div className="text-2xl font-medium text-black ">Get started with <span className="uppercase text-[#01C38D]">sentri</span></div>
           </div>
 
         <div className="mb-6 w-full flex items-center  space-x-6 justify-center">

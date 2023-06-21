@@ -20,7 +20,7 @@ const PhaseB = ({ active }) => {
     >
       <div className="absolute top-8 px-6 sm:px-8 inset-x-0 mx-auto w-full">
         <div className="w-full flex items-start mb-6 justify-start">
-          <div className="text-2xl font-medium text-[#132D46] ">
+          <div className="text-2xl font-medium text-black ">
             Get started with{" "}
             <span className="uppercase text-[#01C38D]">sentri</span>
           </div>
@@ -45,6 +45,7 @@ const PhaseB = ({ active }) => {
           </label>
           <PhoneInput
             country={"us"}
+           buttonStyle={{border:'0px'}}
             value={phone}
             className="w-full"
             onChange={(phone) => setPhone( phone )}

@@ -1,11 +1,17 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import fb from "../../../assets/svg/fb.svg"
 import apple from "../../../assets/svg/apple.svg"
 import google from "../../../assets/svg/google.svg"
 import Loader from "../../UI/Loader";
+import { ReactCountries } from "../../../Utils/countrydropdown/countries";
 const PhaseC = ({active}) => {
-    const [country, setCountry] = useState()
+    const [country, setCountry] = useState('United State of America')
     const [loading, setLoading] = useState(false)
+    //const [countries, setCountries] = useState()
+
+
+    console.log(country)
+
 
     const handleContinue = () => {}
     return (
@@ -13,7 +19,7 @@ const PhaseC = ({active}) => {
         
         <div className="absolute top-8 px-6 sm:px-8 inset-x-0 mx-auto w-full">
        <div className="w-full flex items-start mb-6 justify-start">
-        <div className="text-2xl font-medium text-[#132D46] ">Get started with <span className="uppercase text-[#01C38D]">sentri</span></div>
+        <div className="text-2xl font-medium text-black">Get started with <span className="uppercase text-[#01C38D]">sentri</span></div>
           </div>
 
         <div className="mb-6 w-full flex items-center  space-x-6 justify-center">
@@ -33,16 +39,11 @@ const PhaseC = ({active}) => {
           <label className="block font-medium " htmlFor="country">
             Country
           </label>
-          <input
-            className="block form__input input-field border border-gray-200 bg-gray-100 rounded-md focus:outline-none w-full h-11 px-4"
-            type="country"
-            placeholder=""
-            name="country"
-            value={country}
-            onChange={(e) => {
-              setCountry(e.target.value);
-            }}
-          />
+          
+         <ReactCountries setCountry={setCountry} />
+       
+          
+        
         </div>
      
        </div>
