@@ -10,7 +10,7 @@ const Landing = () => {
     const [timeoutid1, setTimeOutId1] = useState(0);
 
    
-  useEffect(() => {
+  useEffect(() => { 
     const handleSize = () => {
     
         setTimeOutId(
