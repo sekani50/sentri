@@ -4,6 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Scrolltotop from "./components/UI/ScrollToTop";
 import { RequireAuth } from "./Utils/RequireAuth";
 import {
+  Camera,
   DashBoard,
   Landing,
   Registration
@@ -43,6 +44,7 @@ const App = () => {
           <Route exact path="/" element={<Landing />} />
           {/*    LANDING PAGE */}
           <Route exact path="/dashboard" element={<DashBoard />} />
+          <Route exact path="/camera" element={<Camera />} />
           {/**Protected routes */}
     
          

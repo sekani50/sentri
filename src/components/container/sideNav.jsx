@@ -8,9 +8,10 @@ import report from "../../assets/svg/report.svg"
 import client from "../../assets/svg/client.svg"
 import setting from "../../assets/svg/setting.svg"
 import logout from "../../assets/svg/logout.svg"
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const SideNav = ({isNav, setisNav}) => {
     const {pathname} = useLocation()
+    
     return (
         <div
         
@@ -18,7 +19,7 @@ const SideNav = ({isNav, setisNav}) => {
             e.stopPropagation();
             setisNav(!isNav);
           }}
-        className={`fixed z-[37] inset-y-0 left-0 h-full let swipeInLeft ${
+        className={`fixed z-[37] inset-y-0 left-0 h-full lets swipeInLeft ${
             isNav
               ? "w-full bg-black bg-opacity-50 min-[1024px]:w-[250px]"
               : "max-[1024px]:hidden w-[250px] "
@@ -42,14 +43,14 @@ const SideNav = ({isNav, setisNav}) => {
         </div>
 
         <div className="w-full items-start flex-col justify-start text-[15px] text-white space-y-3 py-2 border-b border-[#01C38D]">
-            <div className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${pathname === "/dashboard"? 'bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]' :''}`}>
+            <Link to="/camera" className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${pathname === "/camera"? 'bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]' :''}`}>
                 <div className="w-[25px] h-[25px] ">
                     <img className="w-full h-full" src={camera} alt="" />
 
                 </div>
                 <div>Cameras</div>
 
-            </div>
+            </Link>
             <div className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${pathname === "/event"? 'bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]' :''}`}>
             <div className="w-[25px] h-[25px] ">
                     <img className="w-full h-full" src={event} alt="" />
