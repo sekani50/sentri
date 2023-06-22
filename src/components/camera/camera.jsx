@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import Container from "../container/container";
 import three from "../../assets/png/three.jpg";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { BiTimeFive } from "react-icons/bi";
-import camera from "../../assets/svg/camera.svg";
-import archive from "../../assets/svg/archive.svg";
-import edit from "../../assets/svg/edit.svg";
-import event from "../../assets/svg/event.svg";
-import nosignal from "../../assets/png/nosignal.jpg";
-import Alert from "./alert/alert";
 
-import MenusWidget from "./menuwidget/menuWidget";
+
 import CameraWidget from "./camerwidget/cameraWidget";
 const Camera = () => {
-    const [issignal, setsignal] = useState(true)
-    const [isalert, setalert] = useState(true)
+    const [issignal, ] = useState(true)
+    const [isalert, ] = useState(true)
   return (
     <Container>
       <div className="w-full h-full space-y-5 bg-gray-100 py-14 sm:py-24">

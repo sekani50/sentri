@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/png/logo.png";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+
 import PhaseB from "./registrationphases/phaseB";
 import PhaseD from "./registrationphases/phaseD";
 import PhaseC from "./registrationphases/phaseC";
@@ -9,8 +8,7 @@ import PhaseA from "./registrationphases/phaseA";
 
 const Registration = () => {
   const [active, setActive] = useState(0)
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+
 
   console.log(active)
   return (

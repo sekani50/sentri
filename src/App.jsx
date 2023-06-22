@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
-import toast, { Toaster } from "react-hot-toast";
+import  { Toaster } from "react-hot-toast";
 import Scrolltotop from "./components/UI/ScrollToTop";
-import { RequireAuth } from "./Utils/RequireAuth";
+// import { RequireAuth } from "./Utils/RequireAuth";
 import {
   Camera,
   DashBoard,

@@ -7,7 +7,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 const PhaseB = ({ active }) => {
   const [phone, setPhone] = useState();
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
 
   const handleContinue = () => {};
   return (

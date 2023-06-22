@@ -1,7 +1,7 @@
 import React from "react";
 import lightcam from "../../assets/svg/lightcam.svg"
 import {CiSearch} from 'react-icons/ci'
-import {MdKeyboardVoice,MdOutlineNavigateNext} from 'react-icons/md'
+import {MdOutlineNavigateNext} from 'react-icons/md'
 import {AiOutlineGlobal,AiOutlineAudio} from 'react-icons/ai'
 import {BsBellFill} from 'react-icons/bs'
 

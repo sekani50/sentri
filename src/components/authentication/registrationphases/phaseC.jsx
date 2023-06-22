@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React,{ useState} from "react";
 import fb from "../../../assets/svg/fb.svg"
 import apple from "../../../assets/svg/apple.svg"
 import google from "../../../assets/svg/google.svg"
@@ -6,7 +6,7 @@ import Loader from "../../UI/Loader";
 import { ReactCountries } from "../../../Utils/countrydropdown/countries";
 const PhaseC = ({active}) => {
     const [country, setCountry] = useState('United State of America')
-    const [loading, setLoading] = useState(false)
+    const [loading] = useState(false)
     //const [countries, setCountries] = useState()
 
 

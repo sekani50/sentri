@@ -2,7 +2,7 @@ import axios from "axios";
 
 const FetchClient = () => {
   const defaultOptions = {
-    baseURL: ' https://jekaeat-main.onrender.com/api',
+    baseURL: ' https://example.com/api',
   };
 
   // Create instance
